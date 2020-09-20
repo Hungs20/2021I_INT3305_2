@@ -7,7 +7,7 @@ def giaithua(n):
 def ckn(n, k):
     return giaithua(n)/(giaithua(k) * giaithua(n - k))
 def prob(n, p, r):
-    return ckn(n, n - r + 1) * ((1 - p) ** (n - 1)) * p
+    return ckn(n + r - 1, n) * (p ** r) * ((1 - p) ** n)
 def sumProb(N, p, r):
     res = 0.0
     for i in range(1, N+1):
